@@ -17,9 +17,9 @@
 %%%-------------------------------------------------------------------
 %%% @author Tony Rogvall <tony@rogvall.se>
 %%% @doc
-%%%    Hex Tellstick plugin 
+%%%    Hex egear plugin 
 %%% @end
-%%% Created :  24 Feb 2014 by Tony Rogvall <tony@rogvall.se>
+%%% Created :  20 Jan 2017 by Tony Rogvall <tony@rogvall.se>
 %%%-------------------------------------------------------------------
 -module(hex_egear).
 
@@ -81,67 +81,4 @@ validate_event(out, Flags) ->
 event_spec(in) ->
     [];
 event_spec(out) ->
-    [{choice,protocol,
-      [{'case',nexa,
-	[{container,nexa,
-	  [{leaf,unit,[{type,uint8,[{range,[{$A,$P}],[]}]},
-		       {default,$A,[]}]},
-	   {leaf,channel,[{type,uint8,[{range,[{1,16}],[]}]},
-			  {default,1,[]}]},
-	   {leaf,dimmer,[{type,boolean,[]},
-			 {default,false,[]}]}
-	  ]}
-	]},
-
-       {'case',nexax,
-	[{container,nexax,
-	  [{leaf,unit,[{type,uint32,[{range,[{0,16#3fffffff}],[]}]},
-		       {default,0,[]}]},
-	   {leaf,channel,[{type,uint8,[{range,[{1,16}],[]}]},
-			  {default,1,[]}]}
-	  ]}
-	]},
-
-       {'case',waveman,
-	[{container,waveman,
-	  [{leaf,unit,[{type,uint8,[{range,[{$A,$P}],[]}]},
-		       {default,$A,[]}]},
-	   {leaf,channel,[{type,uint8,[{range,[{1,16}],[]}]},
-			  {default,1,[]}]}
-	  ]}
-	]},
-       
-       {'case',sartano,
-	[{container,sartano,
-	  [{leaf,channel,[{type,uint16,[{range,[{1,16#3ff}],[]}]},
-			  {default,1,[]}]}
-	  ]}
-	]},
-
-       {'case',ikea,
-	[{container,ikea,
-	  [{leaf,unit,[{type,uint8,[{range,[{1,16}],[]}]},
-		       {default,1,[]}]},
-	   {leaf,channel,[{type,uint8,[{range,[{1,10}],[]}]},
-			  {default,1,[]}]},
-	   {leaf,dimmer,[{type,boolean,[]},
-			 {default,false,[]}]},
-	   {leaf,style,[{type,enumeration,
-			 [{enum,smooth,[]},
-			  {enum,instant,[]}]},
-			{default,smooth,[]}]}
-	  ]}
-	]},
-
-       {'case',risingsun,
-	[{container,risingsun,
-	  [{leaf,unit,[{type,uint8,[{range,[{1,4}],[]}]},
-		       {default,1,[]}]},
-	   {leaf,channel,[{type,uint8,[{range,[{1,4}],[]}]},
-			  {default,1,[]}]}
-	  ]}
-	]}
-      ]}
-    ].
-
-
+    [].
