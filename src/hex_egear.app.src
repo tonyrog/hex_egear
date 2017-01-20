@@ -1,0 +1,12 @@
+{application, hex_egear,
+ [
+  {description, "Pallete Gear plugin for HEX"},
+  {vsn, git},
+  {registered, [hex_egear_server]},
+  {applications, [
+                  kernel,
+                  stdlib,
+		  tellstick
+		  ]},
+  {mod, { hex_egear_app, []}}
+ ]}.
