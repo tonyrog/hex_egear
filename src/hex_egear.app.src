@@ -6,7 +6,7 @@
   {applications, [
                   kernel,
                   stdlib,
-		  tellstick
-		  ]},
+		  egear
+		 ]},
   {mod, { hex_egear_app, []}}
  ]}.
